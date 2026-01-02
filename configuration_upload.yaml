@@ -1,0 +1,27 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+mqtt:
+  button:
+    - unique_id: "garage_door_trigger"
+      name: "Garage Door Trigger"
+      command_topic: "home/garage/set"
+      payload_press: "PRESS"
+      qos: 1
+      retain: false
+  camera:
+    - topic: home/garage/camera
+      name: "Garage Camera"
+      unique_id: "garage_cam_esp32"
+      
+# Text to speech
+tts:
+  - platform: google_translate
