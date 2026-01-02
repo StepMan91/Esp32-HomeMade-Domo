@@ -7,7 +7,7 @@
 
 // --- Configuration ---
 const char *ssid = "Freebox-77D9E1";
-const char *password = "dn7hfqtrh5qdwk6hq3rv95";
+const char *password = "secret";
 const char *mqtt_server = "192.168.1.183";
 
 // Topics
@@ -406,3 +406,4 @@ void loop() {
     break;
   }
 }
+
